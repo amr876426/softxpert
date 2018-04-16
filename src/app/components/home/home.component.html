@@ -1,0 +1,96 @@
+<!-- HOME PAGE  -->
+<section id="home" class="home">
+  <div class="overlay">
+    <div class="logo d-flex align-items-center flex-column wow flipInX" data-wow-duration="1700ms">
+      <img src="../../../assets/imgs/logo.png">
+      <div class="title">
+        <P>{{ CompanyName }} </P>
+        <p>Company</p>
+      </div>
+    </div>
+    <div class="button wow zoomIn " data-wow-delay="1.5s">
+      <i class="fas fa-level-down-alt"></i>
+      <p> OUR PROJECTS </p>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURE US  -->
+<section id="feature" class="feature">
+  <div class="container">
+    <div class="col-md-6 " style="margin-top: 10px">
+      <div *ngFor="let feature of features" class="item d-flex align-items-center wow fadeInLeft" data-wow-delay=" 0.5s">
+        <img src="{{feature.icon}}">
+        <div class="data">
+          <h1> {{ feature.description }}</h1>
+          <p> {{ feature.title }} </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 d-flex hand align-items-center justify-content-end wow fadeInRight" data-wow-delay=".s">
+      <img src="../../../assets/imgs/HAND.jpg">
+    </div>
+  </div>
+</section>
+
+<!-- WHO US  -->
+<section id="who-us" class="who-us">
+  <div class="who_top top_box_right"></div>
+  <div class="container d-flex align-items-center wow zommIn">
+    <div class="col-md-4">
+      <div class="search wow zoomIn ">
+        <img src="../../../assets/imgs/search.png">
+      </div>
+    </div>
+    <div *ngFor="let title of posts" class="col-md-8">
+      <div class="title-search wow fadeIn " data-wow-delay="1.0s">
+        <p> {{title.body}} </p>
+      </div>
+    </div>
+  </div>
+  <div class="who_us_bot bot_box_left"></div>
+</section>
+
+<!-- OUR PROJETCS  -->
+<section id="our-project" class="our-project  wow fadeIn" data-wow-delay="0.5s">
+  <h1>our
+    <span>project</span>
+  </h1>
+  <div class="container">
+    <div class="row">
+      <div class="main">
+        <div *ngFor="let pro of project" class="col-md-4">
+          <div class="view view-first">
+            <img src="{{pro.background}}">
+            <div class="mask">
+              <h3>SoftXpert</h3>
+              <a href="#" class="info">See More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OUR ADVANCED  -->
+<div id="our-advanced" class="our-advanced">
+  <div class="container ">
+    <div class="wow fadeIn">
+      <h1>our
+        <span>Advanced</span>
+      </h1>
+    </div>
+    <div class="group d-flex">
+      <div class="col-8">
+        <div *ngFor="let adv of advanceds" class="title wow fadeInLeft">
+          <i class="fas fa-align-left"></i>
+          <p>{{adv.title}} </p>
+        </div>
+      </div>
+      <div class="col-4 wow flash">
+        <img src="../../../assets/imgs/tree.jpg" class="img-responsive">
+      </div>
+    </div>
+  </div>
+</div>
